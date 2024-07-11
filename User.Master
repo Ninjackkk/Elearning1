@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="Elearning1.User" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>My E-Learning Website</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom styles -->
+    <style>
+        /* Add custom styles here */
+        .navbar {
+            background-color: #343a40; /* dark background */
+        }
+        .navbar-brand {
+            color: #ffffff; /* white text */
+        }
+        .navbar-nav .nav-link {
+            color: #ffffff; /* white text */
+            margin-right: 20px; /* adjust spacing between links */
+        }
+        .navbar-nav .nav-link:hover {
+            color: #007bff; /* hover color */
+        }
+        .navbar-toggler-icon {
+            background-color: #ffffff; /* white toggler icon */
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">SoloLearn</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-item nav-link active" href="Allcourses.aspx">All courses</a>
+                        <a class="nav-item nav-link" href="#">My Courses</a>
+                        <a class="nav-item nav-link" href="#">Categories</a>
+                        <a class="nav-item nav-link" href="Login.aspx">Register/Login</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container mt-4">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <!-- Bootstrap JS (optional, for certain components like toggler) -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    </form>
+</body>
+</html>
