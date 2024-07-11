@@ -48,7 +48,7 @@
                     <div class="navbar-nav ml-auto">
                         <a class="nav-item nav-link active" href="Allcourses.aspx">All courses</a>
                         <a class="nav-item nav-link" href="#">My Courses</a>
-                        <a class="nav-item nav-link" href="#">Categories</a>
+                        <a class="nav-item nav-link" href="categories.aspx">Categories</a>
                         <a class="nav-item nav-link" href="Login.aspx">Register/Login</a>
                     </div>
                 </div>
@@ -60,7 +60,6 @@
             </asp:ContentPlaceHolder>
         </div>
 
-        <!-- Bootstrap JS (optional, for certain components like toggler) -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.0/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>

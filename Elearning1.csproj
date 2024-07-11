@@ -72,6 +72,8 @@
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="ResetPass.aspx" />
+    <Content Include="Allcourses.aspx" />
+    <Content Include="categories.aspx" />
     <Content Include="ViewCourses.aspx" />
     <Content Include="ViewUsers.aspx" />
     <Content Include="Web.config" />
@@ -119,6 +121,20 @@
     </Compile>
     <Compile Include="ResetPass.aspx.designer.cs">
       <DependentUpon>ResetPass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Allcourses.aspx.cs">
+      <DependentUpon>Allcourses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Allcourses.aspx.designer.cs">
+      <DependentUpon>Allcourses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="categories.aspx.cs">
+      <DependentUpon>categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="categories.aspx.designer.cs">
+      <DependentUpon>categories.aspx</DependentUpon>
     </Compile>
     <Compile Include="User.Master.cs">
       <DependentUpon>User.Master</DependentUpon>
