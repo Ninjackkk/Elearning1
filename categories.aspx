@@ -52,21 +52,22 @@
     </div>
     <asp:Button ID="Button1" runat="server" Text="Filter" OnClick="Button1_Click" CssClass="btn btn-primary btn-filter" />
 </div>
-
-
-    <asp:DataList ID="DataList1" runat="server" DataKeyField="video_id"  RepeatColumns="4" RepeatDirection="Horizontal">
+    <asp:DataList ID="DataList1" runat="server" DataKeyField="course_id"  RepeatColumns="4" RepeatDirection="Horizontal">
         <ItemTemplate>
             <div class="card">
                 <h5 class="card-header">Course Name : <%# Eval("course_name") %></h5>
                 <div class="card-body">
                     <h6 class="card-subtitle mb-2 text-muted">Subcourse Name :<%# Eval("subcourse") %></h6>
-                    <div class="ratio ratio-16x9">
+                    <%--<div class="ratio ratio-16x9">
                         <iframe width="100%" height="100%" src='https://www.youtube.com/embed/<%# Eval("video_src") %>' title='<%# Eval("video_name") %>' frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>--%>
+                    <div class="video-thumbnail">
+                <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("subcourse_img") %>' AlternateText="Subcourse Image" CssClass="img-fluid" />
                     </div>
-                    <p class="card-text mt-3"><%# Eval("video_desc") %></p>
-                    <p class="card-text"><strong>Video Number:</strong> <%# Eval("video_num") %></p>
-                    <a href="preview.aspx" class="btn btn-primary">Enroll</a>
-                    <a href="preview.aspx" class="btn btn-primary">Add To Cart</a>
+                    Price : <p class="card-text mt-3"><%# Eval("price") %></p>
+<%--                    <p class="card-text"><strong>Video Number:</strong> <%# Eval("video_num") %></p>--%>
+                    <a href="order.aspx" class="btn btn-primary">Enroll</a>
+                    <a href="cart.aspx" class="btn btn-primary">Add To Cart</a>
                 </div>
             </div>
         </ItemTemplate>
@@ -76,5 +77,5 @@
 
     <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Elearning;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT distinct [subcourse] FROM [courses]"></asp:SqlDataSource>
 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Elearning;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [videos]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Elearning;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [courses]"></asp:SqlDataSource>
 </asp:Content>

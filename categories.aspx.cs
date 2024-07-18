@@ -6,7 +6,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Xml.Linq;
 
 namespace Elearning1
 {
@@ -19,8 +18,6 @@ namespace Elearning1
             conn = new SqlConnection(cs);
             conn.Open();
         }
-
-        
 
         protected void Button1_Click(object sender, EventArgs e)
         {

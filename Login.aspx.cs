@@ -46,6 +46,7 @@ namespace Elearning1
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            int userid;
             string user_name=TextBox1.Text.ToString();
             string user_pass=TextBox2.Text.ToString();
             string q = $"exec login '{user_name}','{user_pass}'";
@@ -55,6 +56,10 @@ namespace Elearning1
             {
                 while (rdr.Read())
                 {
+                    int user_id = Convert.ToInt32(rdr["user_id"]);
+
+                    Session["user_id"] = user_id;
+
                     if (rdr["user_name"].Equals("admin") && rdr["user_pass"].Equals("admin"))
                     {
                         Response.Redirect("AddCourse.aspx");
@@ -63,7 +68,7 @@ namespace Elearning1
                     if (rdr["user_name"].Equals(user_name) && rdr["user_pass"].Equals(user_pass) && rdr["user_role"].Equals("user"))
                     {
                         Response.Redirect("" +
-                            "Home.aspx");
+                            "All.aspx");
                     }
                 }
             }

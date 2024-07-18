@@ -46,10 +46,13 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ml-auto">
-                        <a class="nav-item nav-link active" href="Allcourses.aspx">All courses</a>
+                        <a class="nav-item nav-link active" href="All.aspx">All courses</a>
                         <a class="nav-item nav-link" href="#">My Courses</a>
                         <a class="nav-item nav-link" href="categories.aspx">Categories</a>
+                        <a class="nav-item nav-link" href="cart.aspx">Cart</a>
                         <a class="nav-item nav-link" href="Login.aspx">Register/Login</a>
+                        <asp:LinkButton ID="lnkSignOut" runat="server" CssClass="nav-item nav-link" OnClick="lnkSignOut_Click">Sign Out</asp:LinkButton>
+
                     </div>
                 </div>
             </div>

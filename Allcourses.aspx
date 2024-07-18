@@ -29,13 +29,17 @@
                     </div>
                     <p class="card-text mt-3"><%# Eval("video_desc") %></p>
                     <p class="card-text"><strong>Video Number:</strong> <%# Eval("video_num") %></p>
-                    <a href="preview.aspx" class="btn btn-primary">Enroll</a>
-                    <a href="preview.aspx" class="btn btn-primary">Add To Cart</a>
+
+                    <a href="cart.aspx" class="btn btn-primary">Enroll</a>
+                    <asp:Button ID="Button1" runat="server" Text="Add To Cart"/>
+<%--                   <a href="preview.aspx" class="btn btn-primary"</a>--%>
 
                 </div>
             </div>
         </ItemTemplate>
     </asp:DataList>
+
+                       
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Elearning;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT * FROM [videos]"></asp:SqlDataSource>
 </asp:Content>

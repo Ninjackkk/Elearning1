@@ -51,7 +51,7 @@
                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
                     ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Elearning;Integrated Security=True" 
                     ProviderName="System.Data.SqlClient" 
-                    SelectCommand="SELECT [subcourse] FROM [courses]">
+                    SelectCommand="SELECT Distinct [subcourse] FROM [courses]">
                 </asp:SqlDataSource>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
                     ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Elearning;Integrated Security=True" 
