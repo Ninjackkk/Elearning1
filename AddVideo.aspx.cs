@@ -33,12 +33,9 @@ namespace Elearning1
             {
                 string filename = Path.GetFileName(FileUpload1.FileName);
                 string imgPath = "~/img/" + filename;
-
                 string filePath = Server.MapPath(imgPath);
                 FileUpload1.SaveAs(filePath);
-
                 video_img = imgPath;
-
             }
             else
             {
